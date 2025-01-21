@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Bebas Neue", cursive;
+    background: #000000;
+}
+
+.face {
+    position: relative;
+    width: 300px; /* اندازه صورت */
+    height: 300px; /* اندازه صورت */
+    background: linear-gradient(45deg, #7dc3f1, #0099ff); /* ترکیب رنگ صورت (پوستی) */
+    border-radius: 50%; /* شکل دایره‌ای صورت */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 80%; /* فضای مناسب برای چشم‌ها */
+}
+
+.container .left-eye,
+.container .right-eye {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    margin: 0 20px;
+    border-radius: 50%;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.2), inset 0 0 25px #ffffff;
+}
+
+.pupil-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pupil, .pupil-back, .pupil-front {
+    position: absolute;
+    border-radius: 50%;
+    transition: transform 0.1s ease;
+}
+
+.pupil {
+    width: 30px;
+    height: 30px;
+    background-color: #489dff;
+}
+
+.pupil-front {
+    width: 25px;
+    height: 25px;
+    background-color: #000000; /* سیاه */
+    z-index: 1;
+}
